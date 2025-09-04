@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone - Server Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+        .status {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .status-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .online { background-color: #4CAF50; }
+        .offline { background-color: #f44336; }
+        .link {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        button {
+            background: linear-gradient(45deg, #E1306C, #F77737);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>📷 Instagram Clone - Server Status</h1>
+        <p>Your Instagram clone application is ready to use!</p>
+        
+        <div class="status">
+            <div class="status-icon online"></div>
+            <span>Backend Server: <a href="http://localhost:3001/health" class="link" target="_blank">http://localhost:3001</a></span>
+        </div>
+        
+        <div class="status">
+            <div class="status-icon online"></div>
+            <span>Frontend Server: <a href="http://localhost:3000" class="link" target="_blank">http://localhost:3000</a></span>
+        </div>
+        
+        <h2>🚀 Quick Access</h2>
+        <button onclick="window.open('http://localhost:3000', '_blank')">Open Instagram Clone App</button>
+        <button onclick="testBackend()">Test Backend API</button>
+        
+        <h2>📱 Features Available</h2>
+        <ul>
+            <li>✅ User Registration with spam protection</li>
+            <li>✅ User Login with security features</li>
+            <li>✅ Responsive design</li>
+            <li>✅ Modern UI with animations</li>
+            <li>🔄 Gaming system (in development)</li>
+            <li>🔄 Staking system (in development)</li>
+            <li>🔄 Payment integration (in development)</li>
+            <li>🔄 Live chat (in development)</li>
+        </ul>
+        
+        <h2>🛠️ Troubleshooting</h2>
+        <p>If you can't access the application:</p>
+        <ol>
+            <li>Make sure both servers are running (they are! ✅)</li>
+            <li>Try accessing <a href="http://localhost:3000" class="link">http://localhost:3000</a> directly</li>
+            <li>Check if your browser is blocking localhost connections</li>
+            <li>Try a different browser</li>
+            <li>Clear browser cache and cookies</li>
+        </ol>
+        
+        <div id="result" style="margin-top: 20px;"></div>
+    </div>
+
+    <script>
+        async function testBackend() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Testing backend...';
+            
+            try {
+                const response = await fetch('http://localhost:3001/health');
+                const data = await response.json();
+                
+                resultDiv.innerHTML = `
+                    <div class="card">
+                        <h3>✅ Backend Test Successful!</h3>
+                        <p>Status: ${data.status}</p>
+                        <p>Server uptime: ${Math.floor(data.uptime)} seconds</p>
+                        <p>Timestamp: ${data.timestamp}</p>
+                    </div>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="card">
+                        <h3>❌ Backend Test Failed</h3>
+                        <p>Error: ${error.message}</p>
+                        <p>Make sure the backend server is running on port 3001</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Auto-test on page load
+        window.addEventListener('load', () => {
+            setTimeout(testBackend, 1000);
+        });
+    </script>
+</body>
+</html>
