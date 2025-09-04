@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone - Social Media with Gaming & Staking</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Instagram Clone - A comprehensive social media app with live chat, gaming, staking, and payment integration">
+    <meta name="keywords" content="instagram, social media, chat, gaming, staking, payments, UPI, money earning">
+    <meta name="author" content="Instagram Clone Team">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Instagram Clone - Social Media Platform">
+    <meta property="og:description" content="Connect, share, play games, and earn money with our comprehensive social platform">
+    <meta property="og:image" content="/assets/og-image.jpg">
+    <meta property="og:url" content="https://your-app-domain.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instagram Clone - Social Media Platform">
+    <meta name="twitter:description" content="Connect, share, play games, and earn money">
+    <meta name="twitter:image" content="/assets/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#E1306C">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        #root {
+            min-height: 100vh;
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #fff;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-right: 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div class="loading">
+            <div class="spinner"></div>
+            Loading Instagram Clone...
+        </div>
+    </div>
+    
+    <!-- Schema.org structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Instagram Clone",
+        "description": "Social media platform with gaming and staking features",
+        "url": "https://your-app-domain.com",
+        "applicationCategory": "SocialNetworkingApplication",
+        "operatingSystem": "Web, Android, iOS",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Social Media Sharing",
+            "Live Chat",
+            "Money Games",
+            "Stake Funds",
+            "Payment Integration",
+            "UPI Support"
+        ]
+    }
+    </script>
+</body>
+</html>

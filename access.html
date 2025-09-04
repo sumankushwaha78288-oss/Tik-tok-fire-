@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone - Access Your App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .access-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .access-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .access-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .access-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        .access-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+        .access-url {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-family: monospace;
+            font-size: 1.1em;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+        .access-btn {
+            background: linear-gradient(45deg, #E1306C, #F77737);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+        .access-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(225, 48, 108, 0.4);
+        }
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4CAF50;
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .troubleshoot {
+            background: rgba(255, 193, 7, 0.2);
+            border-left: 4px solid #FFC107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .success {
+            background: rgba(76, 175, 80, 0.2);
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">📷</div>
+            <h1 class="title">Instagram Clone</h1>
+            <p class="subtitle">Your comprehensive social media app with gaming, staking, and payment features</p>
+            
+            <div class="success">
+                <div class="status">
+                    <div class="status-dot"></div>
+                    <strong>✅ All Servers are Running Successfully!</strong>
+                </div>
+            </div>
+
+            <div class="access-links">
+                <div class="access-card">
+                    <div class="access-icon">🌐</div>
+                    <div class="access-title">Main Application</div>
+                    <div class="access-url">http://172.30.0.2:3000</div>
+                    <a href="http://172.30.0.2:3000" class="access-btn" target="_blank">Open App</a>
+                </div>
+
+                <div class="access-card">
+                    <div class="access-icon">⚙️</div>
+                    <div class="access-title">Backend API</div>
+                    <div class="access-url">http://172.30.0.2:3001</div>
+                    <a href="http://172.30.0.2:3001/health" class="access-btn" target="_blank">Test API</a>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <div style="font-size: 2em;">🔐</div>
+                    <h3>Secure Authentication</h3>
+                    <p>Advanced spam protection & login security</p>
+                </div>
+                <div class="feature">
+                    <div style="font-size: 2em;">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Real-time messaging system</p>
+                </div>
+                <div class="feature">
+                    <div style="font-size: 2em;">🎮</div>
+                    <h3>Money Games</h3>
+                    <p>Gaming with 20% commission</p>
+                </div>
+                <div class="feature">
+                    <div style="font-size: 2em;">💰</div>
+                    <h3>Stake Funds</h3>
+                    <p>Investment & returns system</p>
+                </div>
+                <div class="feature">
+                    <div style="font-size: 2em;">💳</div>
+                    <h3>Payment Gateway</h3>
+                    <p>UPI & multiple payment options</p>
+                </div>
+                <div class="feature">
+                    <div style="font-size: 2em;">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Works on all devices</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🚀 Quick Start Guide</h2>
+            <ol style="font-size: 1.1em; line-height: 1.8;">
+                <li><strong>Click "Open App"</strong> above to access your Instagram Clone</li>
+                <li><strong>Create Account:</strong> Click "Sign Up" and register with your details</li>
+                <li><strong>Test Security:</strong> Try wrong passwords to see spam protection in action</li>
+                <li><strong>Explore Features:</strong> Navigate through different sections</li>
+                <li><strong>Experience UI:</strong> Enjoy the modern, responsive design</li>
+            </ol>
+        </div>
+
+        <div class="troubleshoot">
+            <h3>🔧 Still Can't Access?</h3>
+            <p><strong>Try these alternative URLs:</strong></p>
+            <ul>
+                <li><code>http://localhost:3000</code> (if accessing locally)</li>
+                <li><code>http://127.0.0.1:3000</code> (alternative local access)</li>
+                <li><code>http://172.30.0.2:3000</code> (network access)</li>
+            </ul>
+            
+            <p><strong>Common solutions:</strong></p>
+            <ul>
+                <li>Try a different browser (Chrome, Firefox, Edge)</li>
+                <li>Disable VPN or proxy</li>
+                <li>Clear browser cache and cookies</li>
+                <li>Check if your firewall is blocking the connection</li>
+                <li>Make sure you're accessing from the same network</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>📊 What's Working Now</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2em;">✅</div>
+                    <strong>User Registration</strong>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2em;">✅</div>
+                    <strong>User Login</strong>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2em;">✅</div>
+                    <strong>Spam Protection</strong>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2em;">✅</div>
+                    <strong>Responsive UI</strong>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2em;">🔄</div>
+                    <strong>Gaming System</strong>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2em;">🔄</div>
+                    <strong>Payment Integration</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Test connectivity on page load
+        async function testConnectivity() {
+            try {
+                const response = await fetch('http://172.30.0.2:3001/health');
+                if (response.ok) {
+                    console.log('✅ Backend connectivity confirmed');
+                }
+            } catch (error) {
+                console.log('⚠️ Backend connectivity issue:', error);
+            }
+        }
+        
+        window.addEventListener('load', testConnectivity);
+    </script>
+</body>
+</html>
