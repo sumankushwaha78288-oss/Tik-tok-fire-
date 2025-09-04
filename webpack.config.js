@@ -61,9 +61,11 @@ module.exports = {
     },
     compress: true,
     port: 3000,
+    host: '0.0.0.0',
     hot: true,
     historyApiFallback: true,
-    open: true,
+    open: false,
+    allowedHosts: 'all',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
